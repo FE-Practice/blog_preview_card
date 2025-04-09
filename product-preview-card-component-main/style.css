@@ -1,0 +1,80 @@
+
+:root{
+    --color-green-500: hsl(158, 36%, 37%);
+    --color-green-700: hsl(158, 42%, 18%);
+   
+    --color-black: hsl(212, 21%, 14%);
+    --color-grey: hsl(228, 12%, 48%);
+    --color-cream: hsl(30, 38%, 92%);
+    --color-white: hsl(0, 0%, 100%);
+}
+*, *::after, *::before{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html,body{   
+    height:100%;
+    
+    background-color: var(--color-cream);
+    display:flex;
+
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.row{
+    display: flex;
+}
+.card{
+    max-width: 650px; /* Or 650px */
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--color-white);
+    /* flex-direction: row; */
+    overflow: hidden;
+    margin: auto;
+}
+.card--img{
+    width: 50%;
+    border-radius: inherit;
+}
+.card--img > img{
+    width: 100%;
+    
+}
+.card--content{
+    
+    width: 50%;
+    display: flex;
+    padding:2rem;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+
+.price {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+.current-price {
+    color: var(--color-green-500);
+    font-size: 2rem;
+    font-weight: bold;
+}
+.old-price {
+    color: var(--color-grey);
+    text-decoration: line-through;
+}
+.card--btn{
+    background-color: var(--color-green-700);
+    padding:0.75rem 1.5em;
+    border-radius: 5px;
+    color: var(--color-white);
+}
+.card--btn:hover {
+    background-color: var(--color-green-500); /* Lighter green on hover */
+  }
